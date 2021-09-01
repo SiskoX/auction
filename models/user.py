@@ -16,3 +16,12 @@ class User(Base):
 
     # items = relationship("Item", back_populates="owner")
 
+
+
+class PaymentInfo(BaseModel):
+    __tablename__ = "paymentinfo"
+    id  = Column (Integer, primary_key=True, index=True)
+    name = Column(String )
+    phone = Column(int ,unique=True ,index=True )
+    location = Column(String )
+    
