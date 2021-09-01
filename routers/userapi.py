@@ -1,7 +1,11 @@
 from schemas import biddingschemas,ordschemas,productschemas,userschemas
 
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter 
 
+router = APIRouter()
+
+@router.get ("/users/",tags =[""])
+async def read_user()
 app = FastAPI()
 
 @app.post("/user/", response_model=  userschemas.UserSchemas)
